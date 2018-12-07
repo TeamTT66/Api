@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebOtoCoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ProductCategories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="HomeOrder" Type="int" />
+    <Property Name="Image" Type="nvarchar(max)" />
+    <Property Name="HomeFlag" Type="bit" />
+    <Property Name="DateCreated" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="DateModified" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="SorOrder" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="SeoPageTitle" Type="nvarchar(max)" />
+    <Property Name="SeoAlias" Type="nvarchar(max)" />
+    <Property Name="SeoKeywords" Type="nvarchar(max)" />
+    <Property Name="SeoDescription" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="WebOtoCoreModelStoreContainer">
+    <EntitySet Name="ProductCategories" EntityType="Self.ProductCategories" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

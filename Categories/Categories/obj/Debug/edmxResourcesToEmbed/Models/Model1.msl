@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebOtoCoreModelStoreContainer" CdmEntityContainer="WebOtoCoreEntities1">
+    <EntitySetMapping Name="ProductCategories">
+      <EntityTypeMapping TypeName="WebOtoCoreModel.ProductCategory">
+        <MappingFragment StoreEntitySet="ProductCategories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="HomeOrder" ColumnName="HomeOrder" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="HomeFlag" ColumnName="HomeFlag" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="SorOrder" ColumnName="SorOrder" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SeoPageTitle" ColumnName="SeoPageTitle" />
+          <ScalarProperty Name="SeoAlias" ColumnName="SeoAlias" />
+          <ScalarProperty Name="SeoKeywords" ColumnName="SeoKeywords" />
+          <ScalarProperty Name="SeoDescription" ColumnName="SeoDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

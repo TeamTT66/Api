@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WebOtoCoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PromotionPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="OriginalPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="HomeFlag" Type="bit" />
+          <Property Name="HotFlag" Type="bit" />
+          <Property Name="ViewCount" Type="int" />
+          <Property Name="Tags" Type="nvarchar" MaxLength="255" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="255" />
+          <Property Name="SeoPageTitle" Type="nvarchar(max)" />
+          <Property Name="SeoAlias" Type="nvarchar" MaxLength="255" />
+          <Property Name="SeoKeywords" Type="nvarchar" MaxLength="255" />
+          <Property Name="SeoDescription" Type="nvarchar" MaxLength="255" />
+          <Property Name="DateCreated" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="DateModified" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Doixe" Type="nvarchar" MaxLength="50" />
+          <Property Name="DongXe" Type="nvarchar" MaxLength="50" />
+          <Property Name="HopSo" Type="nvarchar" MaxLength="50" />
+          <Property Name="KieuDanDong" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mauxe" Type="nvarchar" MaxLength="250" />
+          <Property Name="MucTieuThu" Type="nvarchar" MaxLength="100" />
+          <Property Name="NapNhienLieu" Type="nvarchar" MaxLength="100" />
+          <Property Name="NhienLieu" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoChoNgoi" Type="int" />
+          <Property Name="SoCua" Type="int" />
+          <Property Name="XuatSu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="WebOtoCoreModelStoreContainer">
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WebOtoCoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="PromotionPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="OriginalPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HomeFlag" Type="Boolean" />
+          <Property Name="HotFlag" Type="Boolean" />
+          <Property Name="ViewCount" Type="Int32" />
+          <Property Name="Tags" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SeoPageTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SeoAlias" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SeoKeywords" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SeoDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="DateModified" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Doixe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DongXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HopSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KieuDanDong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mauxe" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MucTieuThu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NapNhienLieu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NhienLieu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SoChoNgoi" Type="Int32" />
+          <Property Name="SoCua" Type="Int32" />
+          <Property Name="XuatSu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="WebOtoCoreEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Products" EntityType="Self.Product" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WebOtoCoreModelStoreContainer" CdmEntityContainer="WebOtoCoreEntities">
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="WebOtoCoreModel.Product">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
+                <ScalarProperty Name="OriginalPrice" ColumnName="OriginalPrice" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="HomeFlag" ColumnName="HomeFlag" />
+                <ScalarProperty Name="HotFlag" ColumnName="HotFlag" />
+                <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="SeoPageTitle" ColumnName="SeoPageTitle" />
+                <ScalarProperty Name="SeoAlias" ColumnName="SeoAlias" />
+                <ScalarProperty Name="SeoKeywords" ColumnName="SeoKeywords" />
+                <ScalarProperty Name="SeoDescription" ColumnName="SeoDescription" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Doixe" ColumnName="Doixe" />
+                <ScalarProperty Name="DongXe" ColumnName="DongXe" />
+                <ScalarProperty Name="HopSo" ColumnName="HopSo" />
+                <ScalarProperty Name="KieuDanDong" ColumnName="KieuDanDong" />
+                <ScalarProperty Name="Mauxe" ColumnName="Mauxe" />
+                <ScalarProperty Name="MucTieuThu" ColumnName="MucTieuThu" />
+                <ScalarProperty Name="NapNhienLieu" ColumnName="NapNhienLieu" />
+                <ScalarProperty Name="NhienLieu" ColumnName="NhienLieu" />
+                <ScalarProperty Name="SoChoNgoi" ColumnName="SoChoNgoi" />
+                <ScalarProperty Name="SoCua" ColumnName="SoCua" />
+                <ScalarProperty Name="XuatSu" ColumnName="XuatSu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

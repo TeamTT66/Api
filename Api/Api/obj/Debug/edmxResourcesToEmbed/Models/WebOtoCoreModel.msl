@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebOtoCoreModelStoreContainer" CdmEntityContainer="WebOtoCoreEntities">
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="WebOtoCoreModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PromotionPrice" ColumnName="PromotionPrice" />
+          <ScalarProperty Name="OriginalPrice" ColumnName="OriginalPrice" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="HomeFlag" ColumnName="HomeFlag" />
+          <ScalarProperty Name="HotFlag" ColumnName="HotFlag" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="Tags" ColumnName="Tags" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="SeoPageTitle" ColumnName="SeoPageTitle" />
+          <ScalarProperty Name="SeoAlias" ColumnName="SeoAlias" />
+          <ScalarProperty Name="SeoKeywords" ColumnName="SeoKeywords" />
+          <ScalarProperty Name="SeoDescription" ColumnName="SeoDescription" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Doixe" ColumnName="Doixe" />
+          <ScalarProperty Name="DongXe" ColumnName="DongXe" />
+          <ScalarProperty Name="HopSo" ColumnName="HopSo" />
+          <ScalarProperty Name="KieuDanDong" ColumnName="KieuDanDong" />
+          <ScalarProperty Name="Mauxe" ColumnName="Mauxe" />
+          <ScalarProperty Name="MucTieuThu" ColumnName="MucTieuThu" />
+          <ScalarProperty Name="NapNhienLieu" ColumnName="NapNhienLieu" />
+          <ScalarProperty Name="NhienLieu" ColumnName="NhienLieu" />
+          <ScalarProperty Name="SoChoNgoi" ColumnName="SoChoNgoi" />
+          <ScalarProperty Name="SoCua" ColumnName="SoCua" />
+          <ScalarProperty Name="XuatSu" ColumnName="XuatSu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
